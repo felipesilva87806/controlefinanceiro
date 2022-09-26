@@ -11,14 +11,13 @@ import { Router } from '@angular/router';
   styleUrls: ['../listagem-categorias/listagem-categorias.component.css']
 })
 export class NovaCategoriaComponent implements OnInit {
-
-
+  
   formulario: any;
   tipos: Tipo[] = [];
 
   constructor(private tiposService: TiposService,
-    private categoriasService: CategoriasService,
-    private router: Router) { }
+              private categoriasService: CategoriasService,
+              private router: Router) { }
 
   ngOnInit(): void {
     this.tiposService.PegarTodos().subscribe(resultado => {
